@@ -1,11 +1,10 @@
-<div ng-controller="jContentCardCtrl as contentCard">
+<div ng-controller="jGoalKeepersCtrl as cards">
   <h3>Goal Keepers</h3>
   <j-cards class="row pi-player-cards pi-player-cards-gtrd">
-    <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in contentCard.goalKeepers">
+    <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in cards.goalKeepers">
       <j-card class="panel" j-card-bg="card.backgroundImg">
         <div class="panel-heading h4">
-          <i class="fa fa-hand-paper-o"></i>
-          <span ng-bind="card.title"></span>
+          <i class="fa fa-hand-paper-o"></i><span ng-bind="card.title"></span>
         </div>
         <div class="panel-body">
           <div>Date Of Birth:
