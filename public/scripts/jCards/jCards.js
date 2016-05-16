@@ -40,16 +40,28 @@ angular.module('jCardsMod', [])
           if ($scope.jCardMatchHeight) {
 
             /* Rematch the height of all cards */
-            var resizeHandler = function() {
+            var _resizeHandler = function() {
+
               _cardMinHeight = 0;
-              $scope.$digest();
+
+              var _allCards = $element.find('.j-card');
+
+              _allCards.css('min-height', _cardMinHeight + 'px');
+
+              _cardMinHeight = Math.max.apply(null, _allCards.map(function() {
+                return $(this).outerHeight();
+              }).get());
+
+              _allCards.css('min-height', _cardMinHeight + 'px');
+
             };
 
-            angular.element($window).bind('resize', resizeHandler);
+            /* Rematch the cards heights on window resize */
+            angular.element($window).bind('resize', _resizeHandler);
 
             $scope.$on('$destroy', function() {
               /* Remove the event resize listner on window */
-              angular.element($window).unbind('resize', resizeHandler);
+              angular.element($window).unbind('resize', _resizeHandler);
             });
 
             /* Method for jCard directive */
@@ -129,10 +141,10 @@ angular.module('jCardsMod', [])
         if (jCards.isMatchCardsHeight()) {
           var heightWatcher = scope.$watch(function() {
             return element.outerHeight();
-          }, function(cardHeight) {
+          }, function(height) {
 
             /* Set same height for all cards */
-            jCards.matchCardsHeight(cardHeight);
+            jCards.matchCardsHeight(height);
 
           });
 
