@@ -1,33 +1,34 @@
 <div ng-controller="jContentCardCtrl as contentCard">
-    <h3>Strikers</h3>
-    <div class="col-xs-12">
-        <j-cards class="row pi-player-cards pi-player-cards-ngtrd">
-            <j-card class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in contentCard.strikers" j-card-bg="card.backgroundImg">
-                <div class="panel">
-                    <div class="panel-heading h4">
-                        <i class="fa fa-futbol-o"></i><span ng-bind="card.title"></span>
-                    </div>
-                    <div class="panel-body">
-                        <p>
-                            <div><span ng-bind="card.description"></span></div>
-                        </p>
-                    </div>
-                    <j-card-hover>
-                        <div class="panel">
-                            <div class="panel-body">
-                                <div class="btn-group btn-group-xs" role="group">
-                                    <button class="btn btn-danger">Career</button>
-                                    <button class="btn btn-danger">Personal Life</button>
-                                </div>
-                                <div class="btn-group btn-group-xs pull-right" role="group">
-                                    <button class="btn btn-primary"><i class="fa fa-facebook"></i></button>
-                                    <button class="btn btn-primary"><i class="fa fa-twitter"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </j-card-hover>
+  <h3>Strikers</h3>
+  <div class="col-xs-12">
+    <j-cards class="row pi-player-cards pi-player-cards-ngtrd">
+      <j-card class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in contentCard.strikers" j-card-bg="card.backgroundImg">
+        <div class="panel">
+          <div class="panel-heading h4">
+            <i class="fa fa-futbol-o"></i>
+            <span ng-bind="card.title"></span>
+          </div>
+          <div class="panel-body">
+            <div>
+              <span ng-bind="card.description"></span>
+            </div>
+          </div>
+          <j-card-hover>
+            <div class="panel">
+              <div class="panel-body">
+                <div class="btn-group btn-group-xs" role="group">
+                  <button class="btn btn-danger">Career</button>
+                  <button class="btn btn-danger">Personal Life</button>
                 </div>
-            </j-card>
-        </j-cards>
-    </div>
+                <div class="btn-group btn-group-xs pull-right" role="group">
+                  <button class="btn btn-primary"><i class="fa fa-edit"></i></button>
+                  <button class="btn btn-primary"><i class="fa fa-trash-o"></i></button>
+                </div>
+              </div>
+            </div>
+          </j-card-hover>
+        </div>
+      </j-card>
+    </j-cards>
+  </div>
 </div>
