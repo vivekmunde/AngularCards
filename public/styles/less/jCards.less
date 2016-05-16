@@ -1,0 +1,32 @@
+.j-cards {
+    .j-card {
+        position: relative;
+        &.j-card-bg {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+        }
+        .j-card-hover {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            background: none;
+            .j-card-hover-bg,
+            .j-card-hover-content {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            .j-card-hover-bg {
+                background: #000;
+                opacity: .5;
+            }
+            &.active {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="jContentCardsMod">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Content Card</title>
+
+    <!-- build:css styles/style.css -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/style.css">
+    <!-- endbuild -->
+
+</head>
+
+<body>
+    <div ng-include="'/views/header.html'"></div>
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+    <div ng-include="'/views/footer.html'"></div>
+</body>
+
+<!-- build:js scripts/script.js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="scripts/jCards/jCards.js"></script>
+<script src="scripts/contentCard/contentCard.js"></script>
+<script src="scripts/contentCard/controllers/contentCard.js"></script>
+<!-- endbuild -->
+
+</html>

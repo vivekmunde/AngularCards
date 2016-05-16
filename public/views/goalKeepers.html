@@ -1,0 +1,38 @@
+<div ng-controller="jContentCardCtrl as contentCard">
+    <h3>Goal Keepers</h3>
+    <j-cards class="row pi-player-cards pi-player-cards-gtrd">
+        <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in contentCard.goalKeepers">
+            <j-card class="panel" j-card-bg="card.backgroundImg">
+                <div class="panel-heading h4">
+                    <i class="fa fa-hand-paper-o"></i><span ng-bind="card.title"></span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <div>Date Of Birth: <span ng-bind="card.dob"></span></div>
+                        <div>Height: <span ng-bind="card.height"></span></div>
+                        <div>Weight: <span ng-bind="card.weight"></span></div>
+                        <div>Age: <span ng-bind="card.age"></span></div>
+                        <div>Country: <span ng-bind="card.country"></span></div>
+                    </p>
+                    <p>
+                        <div><span ng-bind="card.description"></span></div>
+                    </p>
+                </div>
+                <j-card-hover>
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="btn-group btn-group-xs" role="group">
+                                <button class="btn btn-warning">Career</button>
+                                <button class="btn btn-warning">Personal Life</button>
+                            </div>
+                            <div class="btn-group btn-group-xs pull-right" role="group">
+                                <button class="btn btn-info"><i class="fa fa-facebook"></i></button>
+                                <button class="btn btn-info"><i class="fa fa-twitter"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </j-card-hover>
+            </j-card>
+        </div>
+    </j-cards>
+</div>

@@ -1,0 +1,11 @@
+{
+  "name": "ContentCard",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
+    "animate.css": "^3.5.0",
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3"
+  }
+}
