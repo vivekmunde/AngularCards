@@ -169,8 +169,10 @@ angular.module('jCardsMod', [])
       transclude: true,
       require: '^jCard',
       replace: true,
-      template: '<div class="j-card-hover"><div class="j-card-hover-bg"></div><div class="j-card-hover-content" ng-transclude></div></div>',
+      template: '<div class="j-card-hover" ng-transclude></div>',
       link: function(scope, element, attrs, jCard) {
+
+        element.prepend(jQuery('<div>').addClass('j-card-hover-bg'));
 
         /* Pass the hover element to the jCard for configuration */
         jCard.configureHover(element);
