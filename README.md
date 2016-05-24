@@ -7,4 +7,4 @@ Steps to run the prototype:
 - Run "npm install" 
 - Run "bower install" 
 - Run "grunt" 
-- Open the link "http://localhost:3000" in browser 
+- Open the link <a href="http://localhost:3000">http://localhost:3000</a> in browser 
