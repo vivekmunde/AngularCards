@@ -39,16 +39,12 @@ angular.module('jCardsMod', [])
 
             if ($scope.jCardMatchHeight) {
 
-              var _allCards;
-
               /* Rematch the height of all cards */
               var _resizeHandler = function () {
 
                 _cardMinHeight = 0;
 
-                if (!_allCards) {
-                  _allCards = $element.find('.j-card');
-                }
+                var _allCards = $element.find('.j-card');
 
                 _allCards.css('min-height', _cardMinHeight + 'px');
 
@@ -70,12 +66,12 @@ angular.module('jCardsMod', [])
                 _allCards = null;
               });
 
-              /* Method for jCard directive */
-              _this.isMatchCardsHeight = function () {
-                return $scope.jCardMatchHeight;
-              };
-
             }
+
+            /* Method for jCard directive */
+            _this.isMatchCardsHeight = function () {
+              return $scope.jCardMatchHeight;
+            };
 
           }
         ]

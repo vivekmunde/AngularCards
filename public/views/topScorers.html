@@ -1,0 +1,23 @@
+<div ng-controller="jStrikersCtrl as cards">
+  <h1>Top Scorers</h1>
+  <br/>
+  <div class="panel">
+    <div class="panel-body">
+      <h5><i class="fa fa-check"></i>&nbsp;Managed Cards Height: Cards with same height & responsive</h5>
+    </div>
+  </div>
+  <j-cards class="row pi-player-cards pi-player-cards-gtrd">
+    <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="card in cards.strikers">
+      <j-card class="panel">
+        <div class="panel-heading h4">
+          <i class="fa fa-soccer-ball-o"></i><span ng-bind="card.title"></span>
+        </div>
+        <div class="panel-body">
+          <div>
+            <span ng-bind="card.description"></span>
+          </div>
+        </div>
+      </j-card>
+    </div>
+  </j-cards>
+</div>

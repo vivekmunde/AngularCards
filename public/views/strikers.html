@@ -1,8 +1,17 @@
 <div ng-controller="jStrikersCtrl as cards">
-  <h3>Strikers</h3>
+  <h1>Strikers</h1>
+  <br/>
+  <div class="panel">
+    <div class="panel-body">
+      <h5><i class="fa fa-check"></i>&nbsp;Managed Cards Height (Cards with same height & responsive)</h5>
+      <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
+      <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
+      <h5><i class="fa fa-check"></i>&nbsp;Non-Gutterred Columns</h5>
+    </div>
+  </div>
   <div class="col-xs-12">
-    <j-cards class="row pi-player-cards pi-player-cards-ngtrd">
-      <j-card class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in cards.strikers" j-card-bg="card.backgroundImg">
+    <j-cards class="row pi-player-cards pi-player-cards-bg pi-player-cards-ngtrd">
+      <j-card class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in cards.strikers|limitTo:8" j-card-bg="card.backgroundImg">
         <div class="panel">
           <div class="panel-heading h4">
             <i class="fa fa-futbol-o"></i><span ng-bind="card.title"></span>

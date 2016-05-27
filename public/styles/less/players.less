@@ -1,28 +1,19 @@
-body {
-    font-family: sans-serif;
-}
-
-.pl-top-nav {
-    background: #000;
-}
-
 .pi-player-cards {
-    color: #fff;
-    text-shadow: 1px 1px 5px #000;
     .j-card {
         &.panel,
         .panel {
-            background-color: transparent;
             >.panel-heading {
                 i {
                     margin-right: 8px;
                 }
             }
-        }
-        &.panel,
-        >.panel {
-            >.panel-body {
-                padding-top: 100px;
+            .content-img {
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top;
+                width:100%;
+                height: 200px;
+                border: 10px solid #fff;
             }
         }
         .j-card-hover {
@@ -33,9 +24,20 @@ body {
     }
 }
 
-.pi-player-cards-gtrd {
+.pi-player-cards-bg {
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
     .j-card {
-        border: solid 1px #555;
+        &.panel,
+        .panel {
+            background-color: transparent;
+        }
+        &.panel,
+        >.panel {
+            >.panel-body {
+                padding-top: 100px;
+            }
+        }
     }
 }
 

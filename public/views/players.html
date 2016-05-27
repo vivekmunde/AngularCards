@@ -1,0 +1,66 @@
+<div ng-controller="jPlayersCtrl as cards">
+  <h1>Players</h1>
+  <br/>
+  <div class="panel">
+    <div class="panel-body">
+      <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
+      <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
+      <h5><i class="fa fa-check"></i>&nbsp;Cards Height = auto</h5>
+    </div>
+  </div>
+    <script type="text/ng-template" id="/jCardClmnz.html">
+        <j-card class="panel panel-danger">
+            <div class="panel-heading">
+                <i class="fa fa-soccer-ball-o"></i><span ng-bind="card.title"></span>
+            </div>
+            <div class="content-img" style="background-image:url('{{card.backgroundImg}}')"></div>
+            <div class="panel-body">
+                <div>
+                    <span ng-bind="card.description"></span>
+                </div>
+            </div>
+            <j-card-hover>
+                <div class="panel">
+                    <div class="panel-heading">&nbsp;</div>
+                    <div class="panel-body">
+                        <div class="btn-group btn-group-xs" role="group">
+                            <button class="btn btn-warning">Career</button>
+                            <button class="btn btn-warning">Personal Life</button>
+                        </div>
+                        <div class="btn-group btn-group-xs pull-right" role="group">
+                            <button class="btn btn-info"><i class="fa fa-edit"></i></button>
+                            <button class="btn btn-info"><i class="fa fa-trash-o"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </j-card-hover>
+        </j-card>
+    </script>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <j-cards class="pi-player-cards pi-player-cards-gtrd" j-card-match-height="false">
+                <div class="" ng-repeat="card in cards.players.slice(0,4)" ng-include src="'/jCardClmnz.html'">
+                </div>
+            </j-cards>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <j-cards class="pi-player-cards pi-player-cards-gtrd" j-card-match-height="false">
+                <div class="" ng-repeat="card in cards.players.slice(8,12)" ng-include src="'/jCardClmnz.html'">
+                </div>
+            </j-cards>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <j-cards class="pi-player-cards pi-player-cards-gtrd" j-card-match-height="false">
+                <div class="" ng-repeat="card in cards.players.slice(4,8)" ng-include src="'/jCardClmnz.html'">
+                </div>
+            </j-cards>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <j-cards class="pi-player-cards pi-player-cards-gtrd" j-card-match-height="false">
+                <div class="" ng-repeat="card in cards.players.slice(12,16)" ng-include src="'/jCardClmnz.html'">
+                </div>
+            </j-cards>
+        </div>
+    </div>
+  </div>

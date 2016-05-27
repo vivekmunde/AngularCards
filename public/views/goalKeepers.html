@@ -1,6 +1,15 @@
 <div ng-controller="jGoalKeepersCtrl as cards">
-  <h3>Goal Keepers</h3>
-  <j-cards class="row pi-player-cards pi-player-cards-gtrd">
+  <h1>Goal Keepers</h1>
+  <br/>
+  <div class="panel">
+    <div class="panel-body">
+      <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
+      <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
+      <h5><i class="fa fa-check"></i>&nbsp;Cards Height = auto</h5>
+      <h5><i class="fa fa-check"></i>&nbsp;Gutterred Columns</h5>
+    </div>
+  </div>
+  <j-cards class="row pi-player-cards pi-player-cards-bg pi-player-cards-gtrd">
     <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in cards.goalKeepers">
       <j-card class="panel" j-card-bg="card.backgroundImg">
         <div class="panel-heading h4">
