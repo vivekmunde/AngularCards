@@ -1,13 +1,11 @@
 <div ng-controller="jGoalKeepersCtrl as cards">
   <h1>Goal Keepers</h1>
   <br/>
-  <div class="panel">
-    <div class="panel-body">
+  <div class="alert alert-info">
       <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
       <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
       <h5><i class="fa fa-check"></i>&nbsp;Cards Height = auto</h5>
       <h5><i class="fa fa-check"></i>&nbsp;Gutterred Columns</h5>
-    </div>
   </div>
   <j-cards class="row pi-player-cards pi-player-cards-bg pi-player-cards-gtrd">
     <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in cards.goalKeepers">
@@ -53,4 +51,50 @@
       </j-card>
     </div>
   </j-cards>
+  <h3>Html</h3>
+  <pre class="code">
+  &lt;j-cards class="row pi-player-cards pi-player-cards-bg pi-player-cards-gtrd"&gt;
+    &lt;div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in cards.goalKeepers"&gt;
+      &lt;j-card class="panel" j-card-bg="card.backgroundImg"&gt;
+        &lt;div class="panel-heading h4"&gt;
+          &lt;i class="fa fa-hand-paper-o"&gt;&lt;/i&gt;&lt;span ng-bind="card.title"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="panel-body"&gt;
+          &lt;div&gt;Date Of Birth:
+            &lt;span ng-bind="card.dob"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div&gt;Height:
+            &lt;span ng-bind="card.height"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div&gt;Weight:
+            &lt;span ng-bind="card.weight"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div&gt;Age:
+            &lt;span ng-bind="card.age"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div&gt;Country:
+            &lt;span ng-bind="card.country"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;br/&gt;
+          &lt;div&gt;
+            &lt;span ng-bind="card.description"&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;j-card-hover&gt;
+          &lt;div class="panel"&gt;
+            &lt;div class="panel-body"&gt;
+              &lt;div class="btn-group btn-group-xs" role="group"&gt;
+                &lt;button class="btn btn-warning"&gt;Career&lt;/button&gt;
+                &lt;button class="btn btn-warning"&gt;Personal Life&lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class="btn-group btn-group-xs pull-right" role="group"&gt;
+                &lt;button class="btn btn-info"&gt;&lt;i class="fa fa-edit"&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;button class="btn btn-info"&gt;&lt;i class="fa fa-trash-o"&gt;&lt;/i&gt;&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/j-card-hover&gt;
+      &lt;/j-card&gt;
+    &lt;/div&gt;
+  &lt;/j-cards&gt;</pre>
 </div>

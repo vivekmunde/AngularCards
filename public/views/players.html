@@ -1,13 +1,11 @@
 <div ng-controller="jPlayersCtrl as cards">
-  <h1>Players</h1>
-  <br/>
-  <div class="panel">
-    <div class="panel-body">
-      <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
-      <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
-      <h5><i class="fa fa-check"></i>&nbsp;Cards Height = auto</h5>
+    <h1>Players</h1>
+    <br/>
+    <div class="alert alert-info">
+        <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
+        <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
+        <h5><i class="fa fa-check"></i>&nbsp;Cards Height = auto</h5>
     </div>
-  </div>
     <script type="text/ng-template" id="/jCardClmnz.html">
         <j-card class="panel panel-danger">
             <div class="panel-heading">
@@ -63,4 +61,61 @@
             </j-cards>
         </div>
     </div>
-  </div>
+  <h3>Html</h3>
+  <pre class="code">
+  &lt;script type="text/ng-template" id="/jCardClmnz.html"&gt;
+        &lt;j-card class="panel panel-danger"&gt;
+            &lt;div class="panel-heading"&gt;
+                &lt;i class="fa fa-soccer-ball-o"&gt;&lt;/i&gt;&lt;span ng-bind="card.title"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="content-img" style="background-image:url('{{card.backgroundImg}}')"&gt;&lt;/div&gt;
+            &lt;div class="panel-body"&gt;
+                &lt;div&gt;
+                    &lt;span ng-bind="card.description"&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;j-card-hover&gt;
+                &lt;div class="panel"&gt;
+                    &lt;div class="panel-heading"&gt;&nbsp;&lt;/div&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;div class="btn-group btn-group-xs" role="group"&gt;
+                            &lt;button class="btn btn-warning"&gt;Career&lt;/button&gt;
+                            &lt;button class="btn btn-warning"&gt;Personal Life&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="btn-group btn-group-xs pull-right" role="group"&gt;
+                            &lt;button class="btn btn-info"&gt;&lt;i class="fa fa-edit"&gt;&lt;/i&gt;&lt;/button&gt;
+                            &lt;button class="btn btn-info"&gt;&lt;i class="fa fa-trash-o"&gt;&lt;/i&gt;&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/j-card-hover&gt;
+        &lt;/j-card&gt;
+    &lt;/script&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="col-xs-12 col-sm-6 col-md-3"&gt;
+            &lt;j-cards class="pi-player-cards pi-player-cards-gtrd" j-card-match-height="false"&gt;
+                &lt;div class="" ng-repeat="card in cards.players.slice(0,4)" ng-include src="'/jCardClmnz.html'"&gt;
+                &lt;/div&gt;
+            &lt;/j-cards&gt;
+        &lt;/div&gt;
+        &lt;div class="col-xs-12 col-sm-6 col-md-3"&gt;
+            &lt;j-cards class="pi-player-cards pi-player-cards-gtrd" j-card-match-height="false"&gt;
+                &lt;div class="" ng-repeat="card in cards.players.slice(8,12)" ng-include src="'/jCardClmnz.html'"&gt;
+                &lt;/div&gt;
+            &lt;/j-cards&gt;
+        &lt;/div&gt;
+        &lt;div class="col-xs-12 col-sm-6 col-md-3"&gt;
+            &lt;j-cards class="pi-player-cards pi-player-cards-gtrd" j-card-match-height="false"&gt;
+                &lt;div class="" ng-repeat="card in cards.players.slice(4,8)" ng-include src="'/jCardClmnz.html'"&gt;
+                &lt;/div&gt;
+            &lt;/j-cards&gt;
+        &lt;/div&gt;
+        &lt;div class="col-xs-12 col-sm-6 col-md-3"&gt;
+            &lt;j-cards class="pi-player-cards pi-player-cards-gtrd" j-card-match-height="false"&gt;
+                &lt;div class="" ng-repeat="card in cards.players.slice(12,16)" ng-include src="'/jCardClmnz.html'"&gt;
+                &lt;/div&gt;
+            &lt;/j-cards&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</pre>
+</div>
