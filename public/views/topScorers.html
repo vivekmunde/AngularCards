@@ -1,9 +1,9 @@
+<h1>Top Scorers</h1>
+<br/>
+<div class="alert alert-info">
+  <h5><i class="fa fa-check"></i>&nbsp;Managed Cards Height: Cards with same height & responsive</h5>
+</div>
 <div ng-controller="jStrikersCtrl as cards">
-  <h1>Top Scorers</h1>
-  <br/>
-  <div class="alert alert-info">
-      <h5><i class="fa fa-check"></i>&nbsp;Managed Cards Height: Cards with same height & responsive</h5>
-  </div>
   <j-cards class="row pi-player-cards pi-player-cards-gtrd">
     <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="card in cards.strikers">
       <j-card class="panel">
@@ -18,8 +18,10 @@
       </j-card>
     </div>
   </j-cards>
-  <h3>Html</h3>
-  <pre class="code">
+</div>
+<h3>Html</h3>
+<pre class="panel panel-default">
+&lt;div ng-controller="jStrikersCtrl as cards"&gt;
   &lt;j-cards class="row pi-player-cards pi-player-cards-gtrd"&gt;
     &lt;div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="card in cards.strikers"&gt;
       &lt;j-card class="panel"&gt;
@@ -33,5 +35,5 @@
         &lt;/div&gt;
       &lt;/j-card&gt;
     &lt;/div&gt;
-  &lt;/j-cards&gt;</pre>
-</div>
+  &lt;/j-cards&gt;
+&lt;/j-cards&gt;</pre>

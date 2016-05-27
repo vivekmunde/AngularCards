@@ -1,12 +1,12 @@
+<h1>Goal Keepers</h1>
+<br/>
+<div class="alert alert-info">
+  <h5><i class="fa fa-check"></i>&nbsp;Managed Cards Height (Cards with same height & responsive)</h5>
+  <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
+  <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
+  <h5><i class="fa fa-check"></i>&nbsp;Gutterred Cards</h5>
+</div>
 <div ng-controller="jGoalKeepersCtrl as cards">
-  <h1>Goal Keepers</h1>
-  <br/>
-  <div class="alert alert-info">
-      <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
-      <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
-      <h5><i class="fa fa-check"></i>&nbsp;Cards Height = auto</h5>
-      <h5><i class="fa fa-check"></i>&nbsp;Gutterred Columns</h5>
-  </div>
   <j-cards class="row pi-player-cards pi-player-cards-bg pi-player-cards-gtrd">
     <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in cards.goalKeepers">
       <j-card class="panel" j-card-bg="card.backgroundImg">
@@ -51,8 +51,10 @@
       </j-card>
     </div>
   </j-cards>
-  <h3>Html</h3>
-  <pre class="code">
+</div>
+<h3>Html</h3>
+<pre class="panel panel-default">
+&lt;div ng-controller="jGoalKeepersCtrl as cards"&gt;
   &lt;j-cards class="row pi-player-cards pi-player-cards-bg pi-player-cards-gtrd"&gt;
     &lt;div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in cards.goalKeepers"&gt;
       &lt;j-card class="panel" j-card-bg="card.backgroundImg"&gt;
@@ -96,5 +98,5 @@
         &lt;/j-card-hover&gt;
       &lt;/j-card&gt;
     &lt;/div&gt;
-  &lt;/j-cards&gt;</pre>
-</div>
+  &lt;/j-cards&gt;
+&lt;/j-cards&gt;</pre>

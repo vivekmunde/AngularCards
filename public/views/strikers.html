@@ -1,12 +1,12 @@
+<h1>Strikers</h1>
+<br/>
+<div class="alert alert-info">
+  <h5><i class="fa fa-check"></i>&nbsp;Managed Cards Height (Cards with same height & responsive)</h5>
+  <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
+  <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
+  <h5><i class="fa fa-check"></i>&nbsp;Non-Gutterred Cards</h5>
+</div>
 <div ng-controller="jStrikersCtrl as cards">
-  <h1>Strikers</h1>
-  <br/>
-  <div class="alert alert-info">
-      <h5><i class="fa fa-check"></i>&nbsp;Managed Cards Height (Cards with same height & responsive)</h5>
-      <h5><i class="fa fa-check"></i>&nbsp;Background Image</h5>
-      <h5><i class="fa fa-check"></i>&nbsp;Hover Template</h5>
-      <h5><i class="fa fa-check"></i>&nbsp;Non-Gutterred Columns</h5>
-  </div>
   <div class="row">
     <div class="col-xs-12">
       <div class="col-xs-12">
@@ -41,8 +41,10 @@
       </div>
     </div>
   </div>
-  <h3>Html</h3>
-  <pre class="code">
+</div>
+<h3>Html</h3>
+<pre class="panel panel-default">
+&lt;div ng-controller="jStrikersCtrl as cards"&gt;
     &lt;j-cards class="row pi-player-cards pi-player-cards-bg pi-player-cards-ngtrd"&gt;
       &lt;j-card class="col-xs-12 col-sm-6 col-md-3" ng-repeat="card in cards.strikers|limitTo:8" j-card-bg="card.backgroundImg"&gt;
         &lt;div class="panel"&gt;
@@ -70,5 +72,5 @@
           &lt;/j-card-hover&gt;
         &lt;/div&gt;
       &lt;/j-card&gt;
-    &lt;/j-cards&gt;</pre>
-</div>
+    &lt;/j-cards&gt;
+&lt;/j-cards&gt;</pre>
